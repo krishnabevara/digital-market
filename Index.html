@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Shopping Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #6200ea;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.banner {
+  background: #f3e5f5;
+  padding: 2rem;
+  text-align: center;
+}
+
+.products {
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+footer {
+  background: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+  <header>
+    <h1>KrishnaKart</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h2>Welcome to KrishnaKart!</h2>
+    <p>Best deals on fashion, home & more...</p>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Kurti Set</h3>
+        <p>₹499</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Kitchen Set</h3>
+        <p>₹899</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KrishnaKart | Contact: info@krishnakart.in</p>
+  </footer>
+</body>
+</html>
