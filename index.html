@@ -128,6 +128,31 @@ footer {
 
       <button type="submit">Login</button>
     </form>
+    <p style="text-align:center; margin-top: 15px;">
+  Don’t have an account? <a href="#" id="switchToSignup">Sign Up</a>
+</p>
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="signupClose">&times;</span>
+    <h2>Sign Up for CKart</h2>
+    <form>
+      <label for="signup-name">Full Name</label>
+      <input type="text" id="signup-name" placeholder="Enter your name" required>
+
+      <label for="signup-email">Email</label>
+      <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" placeholder="Create a password" required>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" placeholder="Confirm password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
   </div>
 </div>
 
@@ -170,5 +195,38 @@ footer {
     }
   }
 </script>
+  <script>
+  // Open Login Modal
+  document.getElementById('loginLink').onclick = function () {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+
+  // Close Login Modal
+  document.getElementById('loginClose').onclick = function () {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+
+  // Open Signup Modal from link inside Login popup
+  document.getElementById('switchToSignup').onclick = function () {
+    document.getElementById('loginModal').style.display = 'none';
+    document.getElementById('signupModal').style.display = 'block';
+  }
+
+  // Close Signup Modal
+  document.getElementById('signupClose').onclick = function () {
+    document.getElementById('signupModal').style.display = 'none';
+  }
+
+  // Close Modals by clicking outside
+  window.onclick = function (event) {
+    if (event.target == document.getElementById('loginModal')) {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+    if (event.target == document.getElementById('signupModal')) {
+      document.getElementById('signupModal').style.display = 'none';
+    }
+  }
+</script>
+
 </body>
 </html>
