@@ -100,8 +100,130 @@ footer {
   border: none;
   border-radius: 5px;
 }
+    .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  padding: 5px 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.location-bar {
+  background-color: #eaf3f3;
+  padding: 5px 15px;
+  font-size: 14px;
+}
+    .category-strip {
+  display: flex;
+  overflow-x: auto;
+  background: #ffffff;
+  padding: 10px;
+  gap: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.category-item {
+  min-width: 60px;
+  text-align: center;
+  font-size: 14px;
+}
+.promo-banner {
+  background-color: #ffe600;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.product-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+  padding: 1rem;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-card button {
+  background-color: #20B2AA;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+}
+.bottom-nav div {
+  text-align: center;
+}
+
   </style>
 <body>
+  <div class="top-bar">
+  <div class="profile-section">
+    <img src="https://via.placeholder.com/30" class="avatar">
+    <span>Saidamma Bejawada</span>
+  </div>
+  <div class="search-cart">
+    <input type="text" placeholder="Search by Keyword or Product ID" class="search-box">
+    <span class="icon">❤️</span>
+    <span class="icon">🛒<sup>36</sup></span>
+  </div>
+    <div class="promo-banner">
+  🛍️ <strong>UP TO 70% OFF</strong> | 19–20 JULY SALE
+</div>
+
+</div>
+<div class="location-bar">
+  Delivering to <strong>Kurnool - 518001</strong>
+</div>
 <header>
     <h1>CKart</h1>
    <nav>
@@ -155,6 +277,15 @@ footer {
 
   </div>
 </div>
+  <div class="category-strip">
+  <div class="category-item">👗<br>Kurti</div>
+  <div class="category-item">👚<br>Western</div>
+  <div class="category-item">🧒<br>Kids</div>
+  <div class="category-item">👡<br>Footwear</div>
+  <div class="category-item">💄<br>Beauty</div>
+  <div class="category-item">🏠<br>Home</div>
+</div>
+
 
   <section class="banner">
     <h2>Welcome to CKart!</h2>
@@ -178,6 +309,13 @@ footer {
       </div>
     </div>
   </section>
+<div class="bottom-nav">
+  <div>🏠<br>Home</div>
+  <div>👗<br>Categories</div>
+  <div>🛍️<br>Mall</div>
+  <div>📹<br>Video</div>
+  <div>📦<br>Orders</div>
+</div>
 
   <footer>
     <p>&copy; 2025 CKart | Contact: info@Ckart.in</p>
