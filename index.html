@@ -209,7 +209,7 @@ footer {
   <div class="top-bar">
   <div class="profile-section">
     <img src="https://via.placeholder.com/30" class="avatar">
-    <span>Saidamma Bejawada</span>
+   <span id="userDisplayName">Guest</span>
   </div>
   <div class="search-cart">
     <input type="text" placeholder="Search by Keyword or Product ID" class="search-box">
@@ -248,7 +248,7 @@ footer {
       <label for="password">Password</label>
       <input type="password" id="password" placeholder="Enter your password" required>
 
-      <button type="submit">Login</button>
+      <button type="button" onclick="handleLogin()">Login</button>
     </form>
     <p style="text-align:center; margin-top: 15px;">
   Don’t have an account? <a href="#" id="switchToSignup">Sign Up</a>
@@ -362,6 +362,18 @@ footer {
     }
     if (event.target == document.getElementById('signupModal')) {
       document.getElementById('signupModal').style.display = 'none';
+    }
+  }
+</script>
+<script>
+  function handleLogin() {
+    const username = document.getElementById('name').value;
+    if (username.trim() !== '') {
+      document.getElementById('userDisplayName').innerText = username;
+      document.getElementById('loginModal').style.display = 'none';
+
+      // Optional: Hide Login Link from Nav
+      document.getElementById('loginLink').style.display = 'none';
     }
   }
 </script>
