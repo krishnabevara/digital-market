@@ -34,3 +34,60 @@
     popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
   });
 </script>
+  <script>
+    document.getElementById('loginLink').onclick = function() {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+  document.querySelector('.close').onclick = function() {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('loginModal')) {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+  }
+</script>
+  <script>
+  // Open Login Modal
+  document.getElementById('loginLink').onclick = function () {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+
+  // Close Login Modal
+  document.getElementById('loginClose').onclick = function () {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+
+  // Open Signup Modal from link inside Login popup
+  document.getElementById('switchToSignup').onclick = function () {
+    document.getElementById('loginModal').style.display = 'none';
+    document.getElementById('signupModal').style.display = 'block';
+  }
+
+  // Close Signup Modal
+  document.getElementById('signupClose').onclick = function () {
+    document.getElementById('signupModal').style.display = 'none';
+  }
+
+  // Close Modals by clicking outside
+  window.onclick = function (event) {
+    if (event.target == document.getElementById('loginModal')) {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+    if (event.target == document.getElementById('signupModal')) {
+      document.getElementById('signupModal').style.display = 'none';
+    }
+  }
+</script>
+<script>
+  function handleLogin() {
+    const username = document.getElementById('name').value;
+    if (username.trim() !== '') {
+      document.getElementById('userDisplayName').innerText = username;
+      document.getElementById('loginModal').style.display = 'none';
+
+      // Optional: Hide Login Link from Nav
+      document.getElementById('loginLink').style.display = 'none';
+    }
+  }
+</script>
