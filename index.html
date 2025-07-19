@@ -292,23 +292,29 @@ footer {
     <p>Best deals on fashion, home & more...</p>
   </section>
 
-  <section class="products">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product">
-        <h3>Kurti Set</h3>
-        <p>₹499</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product">
-        <h3>Kitchen Set</h3>
-        <p>₹899</p>
-        <button>Add to Cart</button>
-      </div>
+ <section class="products">
+  <h2>Featured Products</h2>
+  <div class="product-grid">
+
+    <div class="product-card" data-name="Kurti Set" data-price="₹499">
+      <img src="https://via.placeholder.com/150" alt="Product">
+      <h3>Kurti Set</h3>
+      <p>₹499</p>
+      <button>Add to Cart</button>
+      <span class="wishlist-heart" onclick="toggleWishlist(this)">❤️</span>
     </div>
-  </section>
+
+    <div class="product-card" data-name="Kitchen Set" data-price="₹899">
+      <img src="https://via.placeholder.com/150" alt="Product">
+      <h3>Kitchen Set</h3>
+      <p>₹899</p>
+      <button>Add to Cart</button>
+      <span class="wishlist-heart" onclick="toggleWishlist(this)">❤️</span>
+    </div>
+
+  </div>
+</section>
+
 <div class="bottom-nav">
   <div>🏠<br>Home</div>
   <div>👗<br>Categories</div>
