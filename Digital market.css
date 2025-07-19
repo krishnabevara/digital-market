@@ -197,5 +197,43 @@ footer {
 .bottom-nav div {
   text-align: center;
 }
+.wishlist-popup {
+  position: fixed;
+  top: 20%;
+  right: 20px;
+  width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 999;
+  display: none;
+}
+
+.wishlist-popup h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.wishlist-popup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.wishlist-popup li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.wishlist-heart {
+  cursor: pointer;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
 
   </style>
